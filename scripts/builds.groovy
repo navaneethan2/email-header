@@ -28,7 +28,7 @@ def getBuildResults(){
 
             def duration = ""
 
-            def result = row.split(regex: ",")
+            def result = row.split( ",")
 
             if(result.size > 0){
                 def compName = result[0].trim()

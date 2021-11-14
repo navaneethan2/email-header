@@ -8,8 +8,33 @@ def getEmailHeaderTable() {
 
     return emailHeader
 }
+
 def emailTest() {
     def email = 'abcd'
     return email
+}
+
+def getBuildResults(){
+    def resultRow = ""
+
+    def results = sh(script: "cat results.txt", returnSdout: true)
+
+    if(result != ''){
+        def resultsArray = results.split("\\R")
+
+        resultsArray.each {
+
+            def row = "${it}"
+
+            def duration = ""
+
+            def result = row.split(regex: ",")
+
+            if(result.size > 0){
+
+
+            }
+        }
+    }
 }
 return this;

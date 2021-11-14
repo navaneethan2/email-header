@@ -9,11 +9,11 @@ pipeline{
                 script{
 
                     builds = load 'scripts/builds.groovy'
-                    //emailHeaderTable = builds.getEmailHeaderTable()
+                    emailHeaderTable = builds.getEmailHeaderTable()
 
                     emailTest = builds.emailTest()
                     echo "${emailTest}"
-                    //echo "${emailHeaderTable}"
+                    echo "${emailHeaderTable}"
                 }
             }
         }

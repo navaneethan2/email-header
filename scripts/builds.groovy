@@ -30,7 +30,7 @@ def getBuildResults(){
 
             def result = row.split( ",")
 
-            if(result.size > 0){
+            if(result.size() > 0){
                 def compName = result[0].trim()
                 def status = result[1].trim()
 

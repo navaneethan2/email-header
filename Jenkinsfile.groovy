@@ -8,7 +8,7 @@ pipeline{
             steps{
                 script{
 
-                    builds = load 'scripts/bulds.groovy'
+                    builds = load 'scripts/builds.groovy'
                     //emailHeaderTable = builds.getEmailHeaderTable()
 
                     emailTest = builds.emailTest()

@@ -31,10 +31,43 @@ def getBuildResults(){
             def result = row.split(regex: ",")
 
             if(result.size > 0){
+                def compName = result[0].trim()
+                def status = result[1].trim()
 
+                def buildStatusStyle = getBuildStatusCellStyle(status)
+
+                resultRow += "<tr><td>${compName}</td><td style=\"${buildStatusStyle}\">${status}</td></tr>"
 
             }
         }
     }
+}
+
+def getEmailBuildResultsTable() {
+
+    def buildResults = "<table cellpadding=\"5\" border=\"1\"><tr><th>Repo</th><th>Status</th></tr>"
+
+    buildResults += getBuildResults()
+    buildResults += "</table>"
+
+    return buildResults
+
+}
+
+def getBuildStatusCellStyle(String status) {
+
+    def style = "text-align:center"
+
+    switch(status) {
+        case "SUCCESS":
+            style = "text-align:center;background-color:#9ACD32;color:white"
+            break
+        case "SKIPPED":
+            style = "text-align:center;background-color:red;color:white"
+            break
+    }
+
+    return style
+
 }
 return this;

@@ -17,9 +17,9 @@ def emailTest() {
 def getBuildResults(){
     def resultRow = ""
 
-    def results = sh(script: "cat results.txt", returnSdout: true)
+    def results = sh(script: "cat results.txt", returnStdout: true)
 
-    if(result != ''){
+    if(results != ''){
         def resultsArray = results.split("\\R")
 
         resultsArray.each {

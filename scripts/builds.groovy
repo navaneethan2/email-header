@@ -10,5 +10,6 @@ def getEmailHeaderTable() {
 }
 def emailTest() {
     def email = 'abcd'
+    return email
 }
 return this;

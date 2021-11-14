@@ -5,8 +5,12 @@ pipeline{
 
     stages{
         stage('email'){
-            emailHeaderTable = builds.getEmailHeaderTable()
-            echo "${emailHeaderTable}"
+            steps{
+                script{
+                    emailHeaderTable = builds.getEmailHeaderTable()
+                    echo "${emailHeaderTable}"
+                }
+            }
         }
     }
 }

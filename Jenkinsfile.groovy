@@ -7,9 +7,10 @@ pipeline{
         stage('email'){
             steps{
                 script{
-                    emailHeaderTable = builds.getEmailHeaderTable()
-                    echo "${emailHeaderTable}"
-
+                    //emailHeaderTable = builds.getEmailHeaderTable()
+                    emailTest = builds.emailTest()
+                    echo "${emailTest}"
+                    //echo "${emailHeaderTable}"
                 }
             }
         }

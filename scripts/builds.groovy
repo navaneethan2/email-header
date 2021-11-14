@@ -10,5 +10,7 @@ def getEmailHeaderTable() {
 
     return emailHeader
 }
-
+def emailTest(){
+    def email = 'abcd'
+}
 return this;

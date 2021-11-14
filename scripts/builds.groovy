@@ -1,3 +1,5 @@
+
+
 def getEmailHeaderTable() {
 
     def emailHeader = '<table cellpadding="5" border="1"><tr>'

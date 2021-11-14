@@ -9,6 +9,7 @@ pipeline{
                 script{
                     emailHeaderTable = builds.getEmailHeaderTable()
                     echo "${emailHeaderTable}"
+
                 }
             }
         }

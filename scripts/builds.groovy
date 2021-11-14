@@ -1,5 +1,3 @@
-
-
 def getEmailHeaderTable() {
 
     def emailHeader = '<table cellpadding="5" border="1"><tr>'
@@ -10,7 +8,7 @@ def getEmailHeaderTable() {
 
     return emailHeader
 }
-def emailTest(){
+def emailTest() {
     def email = 'abcd'
 }
 return this;
